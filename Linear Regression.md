@@ -17,5 +17,6 @@ Use them to explain the variance in the dependent variables
 - Predict the variation in Y based on the variation in X
 
 ## Method of Least Squares
-- For any given line $mX+b$ we can measure the difference between our actual Y values and those predicted
+- For any given line mX+b we can measure the difference between our actual Y values and those predicted
 - Squared differences are a reasonable measure of the goodness of fit and regression analysis tries to minimize this difference
+b=E[X]-mE[X]    m=Cov[X,Y]/V[X]
