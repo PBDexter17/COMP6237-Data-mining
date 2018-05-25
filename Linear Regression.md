@@ -20,3 +20,7 @@ Use them to explain the variance in the dependent variables
 - For any given line mX+b we can measure the difference between our actual Y values and those predicted
 - Squared differences are a reasonable measure of the goodness of fit and regression analysis tries to minimize this difference
 b=E[X]-mE[X]    m=Cov[X,Y]/V[X]
+### Machine learning model
+- Consider the pairs(Xi,Yi) as a training set
+- Learning a mapping y=f(x) from the training set
+- try to learn best parameters m and b, this is often done via minimising some error function E which sums up squared residual errors over training set.
