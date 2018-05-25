@@ -16,11 +16,18 @@ Use them to explain the variance in the dependent variables
 - Both variables are continuous
 - Predict the variation in Y based on the variation in X
 
-## Method of Least Squares
+### Method of Least Squares
 - For any given line mX+b we can measure the difference between our actual Y values and those predicted
 - Squared differences are a reasonable measure of the goodness of fit and regression analysis tries to minimize this difference
 b=E[X]-mE[X]    m=Cov[X,Y]/V[X]
-### Machine learning model
+#### Machine learning model
 - Consider the pairs(Xi,Yi) as a training set
 - Learning a mapping y=f(x) from the training set
 - try to learn best parameters m and b, this is often done via minimising some error function E which sums up squared residual errors over training set.
+#### Residuals
+- It is differences between predicted output and actual output. It should roughly be normally distributed with a mean of zero.
+- Coefficients: m and b
+#### Other output
+- R-square value and adjusted R-square value to account for the fact that models with more parameters are expected to perform better
+- F-statistic. Finish with an F-test on the model as a whole with degrees of freedom 1 and 98 - tests the significance of the model.
+
