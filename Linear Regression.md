@@ -28,6 +28,8 @@ b=E[X]-mE[X]    m=Cov[X,Y]/V[X]
 - It is differences between predicted output and actual output. It should roughly be normally distributed with a mean of zero.
 - Coefficients: m and b
 #### Other output
-- R-square value and adjusted R-square value to account for the fact that models with more parameters are expected to perform better
+- R-square value and adjusted R-square value to account for the fact that models with more parameters are expected to perform better.
+*The R-squared statistic provides a measure of how well the model is fitting the actual data.*
 - F-statistic. Finish with an F-test on the model as a whole with degrees of freedom 1 and 98 - tests the significance of the model.
+*F-statistic is a good indicator of whether there is a relationship between our predictor and the response variables.*
 
