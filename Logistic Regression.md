@@ -1,9 +1,9 @@
-### Logistic regression
+## Logistic regression
 - Try to predict results of a binary (or categorical) outcome variable Y from a predictor variable X. This is a classification problem: classify X as belonging to one of two classes.
 - Can transform predictor variable to something we can do linear regression on.
 - logistic regression model.
 
-#### Likelihood Functions for Log Regression
+### Likelihood Functions for Log Regression
 Can fit the model using MLE
 #### Comments
 Logistic regression is a modelling choice, posit it, then check whether it works or has systematic flaws.
@@ -15,7 +15,7 @@ Logistic regression is a modelling choice, posit it, then check whether it works
 - Fit a polynomial instead of a straight line.
 - Same idea as linear regression, just turning one predictor (X) into several (X2,X3, …). 
 - Allows to deal with obvious non-linearity without having to specify in advance what transformation is 
-#### Model reduction
+### Model reduction
 - “Step-wise” model reduction. Either start with full model and reduce or start with simplest model and build up complexity. 
 #### Kullback-Leibler divergence
 - Measure of the informational distance between two probability distributions
@@ -31,3 +31,16 @@ Logistic regression is a modelling choice, posit it, then check whether it works
 - Likelihood function must be twice differentiable
 - Used for: Linear regression, generalised linear models, constant bin width histogram estimation 
 - Dont use it for Multi-layer neural networks (uniqueness of p); Mixture models; The uniform distribution (differentiability)
+#### Nonlinear Data, Transformations
+Don't work with the raw data for X but with some transformation f(X) which will hopefully be closer to linear 
+### Dependent Data
+#### Interaction Terms
+Regression on multiple variables assumes that these variables are independent 
+- If two predictor variables influence the outcome in a way that is not additive we need to include an interaction term in the model to capture this effect 
+#### When to include Interaction Terms
+If you have a large number of predictors it is not practical to include all interactions
+
+Include When:
+- Theoretical reasons or direct questions that need to be answered; or suggested by other descriptive stats 
+- Once in there, up for elimination by model reduction. (if an interaction terms stays in the model, component terms also need to be retained to allow for an interpretation)
+
