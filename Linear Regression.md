@@ -32,4 +32,5 @@ b=E[X]-mE[X]    m=Cov[X,Y]/V[X]
 *The R-squared statistic provides a measure of how well the model is fitting the actual data.*
 - F-statistic. Finish with an F-test on the model as a whole with degrees of freedom 1 and 98 - tests the significance of the model.
 *F-statistic is a good indicator of whether there is a relationship between our predictor and the response variables.*
+### Maximum Likelihood Estimation
 
