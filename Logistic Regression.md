@@ -43,4 +43,4 @@ If you have a large number of predictors it is not practical to include all inte
 Include When:
 - Theoretical reasons or direct questions that need to be answered; or suggested by other descriptive stats 
 - Once in there, up for elimination by model reduction. (if an interaction terms stays in the model, component terms also need to be retained to allow for an interpretation)
-
+- Example. The outcome measure Y (happiness) is dependent on the predictor X (length of marriage) but also on a categorical variable Group (male or female)
