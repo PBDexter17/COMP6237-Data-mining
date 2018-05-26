@@ -33,4 +33,5 @@ b=E[X]-mE[X]    m=Cov[X,Y]/V[X]
 - F-statistic. Finish with an F-test on the model as a whole with degrees of freedom 1 and 98 - tests the significance of the model.
 *F-statistic is a good indicator of whether there is a relationship between our predictor and the response variables.*
 ### Maximum Likelihood Estimation
+- Suppose we have a set of n data points X1,...,Xn which are from some probability distribution function f(x;p) which has some hidden parameters, p. We want to guess it. 
 
