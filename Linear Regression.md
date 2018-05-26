@@ -34,4 +34,11 @@ b=E[X]-mE[X]    m=Cov[X,Y]/V[X]
 *F-statistic is a good indicator of whether there is a relationship between our predictor and the response variables.*
 ### Maximum Likelihood Estimation
 - Suppose we have a set of n data points X1,...,Xn which are from some probability distribution function f(x;p) which has some hidden parameters, p. We want to guess it. 
-
+- Least squares is equivalent to an MLE estimate for m and b if X and Y are linearly related with Gaussian noise.
+#### Why weighted Least Squares
+- To focus accuracy – might be more interested in certain X-regions, or errors in some regions might be more costly than in others. *Some Xs might be more important.*
+- There is a number of other optimisation problems transformed/approximated by WLS, e.g. generalised linear models where the response is some nonlinear function of a linear predictor (e.g. logistic regression, see later)
+#### Homo-/Heteroskedasticity
+- Discounting imprecision.
+Ordinary least squares assumes Gaussian white noise has constant variance (homoskedasticity). Often this is not the case.
+- Does not make much sense to concentrate on noisy parts of the data, want to use parts with little noise for our estimates.
