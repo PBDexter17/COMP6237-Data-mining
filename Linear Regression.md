@@ -8,7 +8,7 @@ What about if we want to predict the value of one variable based on the knowledg
 
 #### Dependent or outcome variables
 It is assumed to be predictable from some other variables
-### Independent or predictor variables
+#### Independent or predictor variables
 Use them to explain the variance in the dependent variables
 
 #### Variables in Regression
@@ -16,7 +16,7 @@ Use them to explain the variance in the dependent variables
 - Both variables are continuous
 - Predict the variation in Y based on the variation in X
 
-#### Method of Least Squares
+### Method of Least Squares
 - For any given line mX+b we can measure the difference between our actual Y values and those predicted
 - Squared differences are a reasonable measure of the goodness of fit and regression analysis tries to minimize this difference
 b=E[X]-mE[X]    m=Cov[X,Y]/V[X]
@@ -46,3 +46,8 @@ Ordinary least squares assumes Gaussian white noise has constant variance (homos
 Use weighted regression performs better than unweighted regression.
 - Somehow know it from measurement device (e.g. know precision of the devise for various ranges)
 - E.g. in polls or surveys variance of the proportions we find should be inversely related to sample size, hence can make weights proportional to sample size. 
+- Try to estimate it from the data.
+### Local Linear Regression
+what if the relationship is not linear? 
+- Naive approach: use some window (say of size h) around data points and then use weight least squares.
+- Kernel regression
