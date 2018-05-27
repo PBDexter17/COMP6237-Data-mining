@@ -24,3 +24,9 @@ Feature extractors are often defined so that they produce vectors that are close
 #### Measuring user similarity
 - Euclidean Similarity. 
 - Pearson Correlation. An alternative measure of similarity is to compute the correlation of the users based on the ratings they share. Pearson’s correlation is the standard measure of dependence between two r.v’s. 
+#### Important Aside: Grade inﬂation
+Users are notoriously bad at giving consistent absolute ratings.
+- two users might agree that they both enjoyed a ﬁlm, but one might give it a 4 and the other a 5.
+- Pearson correlation corrects for this automatically, but the Euclidean similarity doesn’t
+- Data normalisation and mean centring can overcome this.
+    - data standardisation
