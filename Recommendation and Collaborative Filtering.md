@@ -30,3 +30,14 @@ Users are notoriously bad at giving consistent absolute ratings.
 - Pearson correlation corrects for this automatically, but the Euclidean similarity doesn’t
 - Data normalisation and mean centring can overcome this.
     - data standardisation
+#### User-based Filtering
+- Rating and Ranking the critics
+    - We now have a set of measures for computing the similarity between users. 
+    - Can use this to produce a ranked list of the best matches (most similar users) to a target user. When computing the ranked list, might only want to consider a subset of users. e.g. those who rated a particular item.
+- Recommending Items
+Now we know how to ﬁnd similar users, how can we recommend items? 
+	- Predict the rating, *r<sub>u,i</sub>*, of an item *i* by user *u* as an aggregation of the ratings of item *i* by users similar to *u*: <img style="vertical-align:middle" src="http://latex.codecogs.com/svg.latex?\small r_{u,i} = \mathrm{aggr}_{\hat u \in U}(r_{\hat u, i})"/>, where *U* is the set *N* of top users most similar to *u* that rated item *i*.
+	- Possible aggregation functions:
+		- <img style="vertical-align:middle" src="http://latex.codecogs.com/svg.latex?\small r_{u,i} = \frac{1}{N} \sum\limits_{\hat u \in U} r_{\hat u, i}"/>
+		- <img style="vertical-align:middle" src="http://latex.codecogs.com/svg.latex?\small r_{u,i} = \frac{\sum\limits_{\hat u \in U} \mathrm{sim}(u, \hat u)r_{\hat u, i}}{\sum\limits_{\hat u \in U}|\mathrm{sim}(u, \hat u)|}"/>
+		- <img style="vertical-align:middle" src="http://latex.codecogs.com/svg.latex?\small r_{u,i} = \bar{r}_u + \frac{\sum\limits_{\hat u \in U} \mathrm{sim}(u, \hat u)(r_{\hat u, i} - \bar{r}_{\hat{u}})}{\sum\limits_{\hat u \in U}|\mathrm{sim}(u, \hat u)|}"/>
